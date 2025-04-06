@@ -4,17 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LPG Engineering</title>
+    <title>kazmi engineering</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <script src="https://kit.fontawesome.com/d94febef27.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="http://www.kazmieng.com" target="_blank">
-                <img src="img/logo.png" alt="Kazmi Engineering Logo" class="header-logo">
-            </a>
+            <h1 class="header-logo">KAZMI Engineering</h1>
             <!-- Hamburger button for mobile view -->
             <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
@@ -29,31 +28,38 @@
     </header>
 
     <section class="hero">
-        <video autoplay muted loop playsinline class="bg-video">
-            <source src="vids/vid1.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-        </video>
-        <div class="hero-content">
-            <h1>Oil & Gas Services</h1>
-            <p>Adding exploration and boosting production</p>
-            <a href="#" class="btn">Get Started</a>
+        <div class="slider">
+            <div class="slide active" style="background-image: url('img/img6.jpeg')"></div>
+            <div class="slide" style="background-image: url('img/img7.jpeg')"></div>
         </div>
+
+        <div class="hero-content">
+            <h1>LPG Engineering Services</h1>
+        </div>
+        <div class="slider-dots" id="slider-dots"></div>
     </section>
+
 
     <section class="overview">
         <div class="overview-content">
             <div class="overview-text">
-                <h2>Overview</h2>
-                <p>Kazmi Engineering was founded in 1995 in response to safety violations and the lack of technical
-                    expertise in the growing LPG sector. The first LPG quota was issued in 1972–73 from the Dhullian Oil
-                    Field, and as the industry expanded, the need for experienced professionals became critical. With
-                    strong field experience, Kazmi Engineering aimed to ensure safe, ethical, and efficient LPG plant
-                    installations.
+                <h2>Message from the CEO</h2>
+                <p>The first LPG quota allocation by the Ministry of Petroleum was granted to Foundation Gas & Burshane
+                    Pak Ltd in 1972-73 from the Dhullian Oil Field. As the LPG business expanded, more licenses were
+                    issued, but safety violations increased, highlighting the need for technical expertise in plant
+                    installation. With years of field experience, I founded Kazmi Engineering in 1995 to serve the LPG
+                    sector with proper knowledge and commitment.
                     <br>
-                    The company quickly built a solid reputation for quality service, safety standards, and ethical
-                    practices. Today, it serves marketing companies across all provinces, contributing to the energy
-                    sector with commitment and integrity. The founder takes pride in the firm’s positive impact and
-                    remains dedicated to its continued growth and responsible service.
+                    <br>
+                    Kazmi Engineering earned a solid reputation by operating ethically, prioritizing safety, and
+                    choosing the right products. By the grace of Allah, the firm is now well-recognized nationwide, with
+                    offices across all provinces, serving major marketing companies that rely on our experience.
+                    <br>
+                    <br>
+                    I take pride in the positive change we've brought to the energy sector. I'm grateful for our growth
+                    and remain committed to continuing this mission with hard work, ethics, loyalty, and care. I truly
+                    believe I’m doing what I was meant to do, and I’m thankful for the opportunity to make a meaningful
+                    impact.
                 </p>
             </div>
             <div class="overview-image"></div> <!-- Image beside the text -->
@@ -121,10 +127,61 @@
 
     </section>
 
+    <div class="team-section">
+        <div class="team-intro">
+            <h2>Our Amazing Team</h2>
+            <p>Meet the exceptional individuals driving our success. With leadership, strategy, and innovation at the
+                forefront, our team is dedicated to delivering excellence in every project.</p>
+        </div>
+
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="img/ceo.jpeg" alt="Syed Abbas Kazmi">
+                <h4>Syed Abbas Kazmi</h4>
+                <p>Chairman / CEO</p>
+            </div>
+            <div class="team-member">
+                <img src="img/img1.png" alt="Yasir Abbas Kazmi">
+                <h4>Yasir Abbas Kazmi</h4>
+                <p>Executive Director - North</p>
+            </div>
+            <div class="team-member">
+                <img src="img/img1.png" alt="Mudasar Abbas Kazmi">
+                <h4>Mudasar Abbas Kazmi</h4>
+                <p>Executive Director - South</p>
+            </div>
+            <div class="team-member">
+                <img src="img/img1.png" alt="Haleem Qureshi">
+                <h4>Haleem Qureshi</h4>
+                <p>General Manager</p>
+            </div>
+            <div class="team-member">
+                <img src="img/img1.png" alt="Naveed Arshad">
+                <h4>Naveed Arshad</h4>
+                <p>Manager Sales & Marketing – S</p>
+            </div>
+            <div class="team-member">
+                <img src="img/img1.png" alt="Bilal Mughal">
+                <h4>Bilal Mughal</h4>
+                <p>Administration Manager</p>
+            </div>
+            <div class="team-member">
+                <img src="img/img1.png" alt="Ayaz Qadir">
+                <h4>Ayaz Qadir</h4>
+                <p>Project Engineer - South</p>
+            </div>
+            <div class="team-member">
+                <img src="img/img1.png" alt="Haji Zafar Iqbal">
+                <h4>Haji Zafar Iqbal</h4>
+                <p>Project Engineer - North</p>
+            </div>
+        </div>
+    </div>
+
     <section class="projects">
         <!-- Gradient Heading -->
         <h2 class="projects-heading">Our Projects</h2>
-    
+
         <div class="projects-nav">
             <ul>
                 <li><a href="#" class="show-all">Show All /</a></li>
@@ -132,7 +189,7 @@
                 <li><a href="#" class="drilling">Bulk Installation</a></li>
             </ul>
         </div>
-    
+
         <div class="projects-gallery">
             <div class="show-all-images project-category">
                 <!-- Images for Show All -->
@@ -165,7 +222,20 @@
             </div>
         </div>
     </section>
-    
+
+    <div class="custom-floating-btn-wrapper">
+        <div class="custom-social-icons">
+            <a href="https://wa.me/923008529713" target="_blank" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+        <div class="custom-toggle-btn">^</div>
+    </div>
+
+
     <footer>
         <div class="footer-section logo">
             <a href="http://www.kazmieng.com" target="_blank">
@@ -177,30 +247,67 @@
             <p><strong>ISLAMABAD:</strong> House No. 296, Street No. 10, Zaraj Housing Society</p>
             <p><strong>KARACHI:</strong> 1st Floor, App. No. 1, PLOT 6-E, DHA, Karachi</p>
             <p><strong><i class="fas fa-phone"></i> Phone:</strong> +92(300)8529713, +92(300)8549713</p>
-        </div>        
+        </div>
         <div class="footer-section social-links">
             <h3><i class="fab fa-whatsapp"></i> Follow Us</h3>
             <a href="https://wa.me/+923008529713" target="_blank" class="whatsapp-icon">
                 <img src="img/img5.png" alt="WhatsApp">
             </a>
-            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:info@kazmiengineering.com">info@kazmiengineering.com</a></p>
-            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:kazmiengineering@gmail.com">kazmiengineering@gmail.com</a></p>
+            <p><i class="fas fa-envelope"></i> Email: <a
+                    href="mailto:info@kazmiengineering.com">info@kazmiengineering.com</a></p>
+            <p><i class="fas fa-envelope"></i> Email: <a
+                    href="mailto:kazmiengineering@gmail.com">kazmiengineering@gmail.com</a></p>
         </div>
-    
+
         <div class="footer-section website-info">
             <h3><i class="fas fa-globe"></i> Website</h3>
             <p><a href="http://www.kazmieng.com" target="_blank">www.kazmieng.com</a></p>
         </div>
     </footer>
     <p class="footer-bpara">&copy; 2024 LPG Engineering. All rights reserved.</p>
-    
 
-    <!-- Script for hamburger toggle -->
+
     <script>
+        // js toggle
         document.getElementById("hamburger").addEventListener("click", function () {
             const navLinks = document.getElementById("nav-links");
             navLinks.classList.toggle("active");
         });
+
+        // js hero section
+
+        const slides = document.querySelectorAll(".slide");
+        const dotsContainer = document.getElementById("slider-dots");
+
+        let currentSlide = 0;
+
+        // Generate dots dynamically
+        slides.forEach((_, i) => {
+            const dot = document.createElement("span");
+            dot.classList.add("dot");
+            if (i === 0) dot.classList.add("active");
+            dot.addEventListener("click", () => {
+                currentSlide = i;
+                updateSlider();
+            });
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll(".dot");
+
+        function updateSlider() {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle("active", i === currentSlide);
+                dots[i].classList.toggle("active", i === currentSlide);
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateSlider();
+        }
+
+        setInterval(nextSlide, 5000); // Change every 5s
 
         // js for the project nav
 

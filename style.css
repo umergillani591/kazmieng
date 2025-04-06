@@ -24,8 +24,10 @@ header {
     cursor: pointer;
     z-index: 10;
     position: absolute;
-    right: 20px; /* Position the hamburger on the right side */
-    top: 20px; /* Add some space from the top */
+    right: 20px;
+    /* Position the hamburger on the right side */
+    top: 20px;
+    /* Add some space from the top */
 }
 
 /* Nav Styling */
@@ -34,21 +36,29 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 1.5rem 2rem;
+    padding: 0.5rem 2rem;
     flex-wrap: wrap;
     width: 100%;
     z-index: 10;
-    position: relative; /* changed from absolute */
+    position: relative;
+    /* changed from absolute */
 }
 
 
 /* Logo Styling */
 .header-logo {
-    width: 80px; /* Adjust the size as needed */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 100%; /* Ensure it doesn't exceed the container width */
+    font-size: 1.5rem;
+    /* Adjust size */
+    font-weight: 700;
+    /* Make it stand out */
+    font-family: 'Montserrat', sans-serif;
+    /* Use a clean modern font */
+    background: linear-gradient(to right, #65997b, #404e5f);
+    color: transparent;
+    background-clip: text;
+    text-decoration: none;
+    /* Remove underline if it’s a link */
 }
-
 
 /* Navigation list styling */
 nav ul {
@@ -65,16 +75,17 @@ nav ul {
 nav ul li {
     display: inline;
     position: relative;
-    padding-bottom: 5px;
+    /* padding-bottom: 5px; */
 }
 
 /* Links Styling */
 nav ul li a {
-    background: linear-gradient(to right, #153823, #0c2642); /* Gradient colors */
+    background: linear-gradient(to right, #153823, #0c2642);
+    /* Gradient colors */
     color: transparent;
     background-clip: text;
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 700;
     /* z-index: 11; */
     position: relative;
@@ -109,78 +120,75 @@ nav ul li a:hover {
 
 
 /* Hero Section Styling */
+
 .hero {
     position: relative;
-    height: 80vh;
+    width: 100%;
+    height: 100vh;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    /* margin-top: 80px; */
 }
 
-
-.bg-video {
+.slider {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    z-index: 0;
-    opacity: 0.85;
+    top: 0;
+    left: 0;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
 }
 
 .hero-content {
     position: relative;
-    /* z-index: 1; */
-    color: #fff;
-    animation: fadeIn 2s ease-in-out;
-    font-size: 20px;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
 }
 
 .hero-content h1 {
-    font-size: 70px;
-    background: linear-gradient(to right, #65997b, #404e5f); /* Gradient colors */
-    color: transparent;
-    background-clip: text;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
 }
 
-/* .hero-content h1 {
-    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.747);
+.slider-dots {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
 }
 
-.hero-content .btn {
-    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.6);
-} */
-
-/* Button Styling */
-.btn {
+.slider-dots .dot {
     display: inline-block;
-    background: linear-gradient(to right, #153823, #0c2642); 
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: 0.3s;
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-    background: #093ece;
+.slider-dots .dot.active {
+    background-color: #fff;
 }
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 
 /* Services Section */
 .service-container {
@@ -210,7 +218,8 @@ nav ul li a:hover {
 .services-heading {
     text-align: center;
     font-size: 2.8rem;
-    background: linear-gradient(to right, #153823, #0c2642); /* Gradient colors */
+    background: linear-gradient(to right, #153823, #0c2642);
+    /* Gradient colors */
     color: transparent;
     background-clip: text;
     margin-bottom: 2rem;
@@ -233,25 +242,27 @@ nav ul li a:hover {
     padding-bottom: 4px;
 }
 
-.service-card i{
+.service-card i {
     font-size: 30px;
     margin-top: 5px;
     margin-left: 5px;
     background: linear-gradient(to right, #153823, #0c2642);
-    background-clip: text;           
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .services-btn-container {
     display: flex;
-    justify-content: center; /* Center the button */
-    margin-top: 10px; /* Add space between cards and button */
+    justify-content: center;
+    /* Center the button */
+    margin-top: 10px;
+    /* Add space between cards and button */
     margin-bottom: 40px;
 }
 
 .service-btn {
-    background: linear-gradient(to right, #153823, #0c2642);  
+    background: linear-gradient(to right, #153823, #0c2642);
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -262,26 +273,36 @@ nav ul li a:hover {
 }
 
 .service-btn:hover {
-    background: linear-gradient(to right, #1b492e, #123861);  
+    background: linear-gradient(to right, #1b492e, #123861);
 }
 
 /* overview css */
 .overview {
     position: relative;
-    color: white; /* Ensure text color is white for contrast */
+    color: white;
+    /* Ensure text color is white for contrast */
     background-image: linear-gradient(to right, #263a35, #162a3d);
-    display: flex; /* Use flexbox to arrange content */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    padding: 1.5rem 10rem; /* Adjust padding */
-    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+    display: flex;
+    /* Use flexbox to arrange content */
+    justify-content: center;
+    /* Center content horizontally */
+    align-items: center;
+    /* Center content vertically */
+    padding: 1.5rem 10rem;
+    /* Adjust padding */
+    flex-wrap: wrap;
+    /* Allow content to wrap on smaller screens */
 }
 
 .overview-content {
-    display: flex; /* Flex container for text and image */
-    justify-content: space-between; /* Space between text and image */
-    align-items: center; /* Vertically center the items */
-    width: 100%; /* Full width */
+    display: flex;
+    /* Flex container for text and image */
+    justify-content: space-between;
+    /* Space between text and image */
+    align-items: center;
+    /* Vertically center the items */
+    width: 100%;
+    /* Full width */
 }
 
 .overview-text {
@@ -296,12 +317,72 @@ nav ul li a:hover {
 }
 
 .overview-image {
-    width: 40%; /* Adjust size */
-    background-image: url('img/img4.jpeg'); /* Set your image here */
+    width: 40%;
+    /* Adjust size */
+    background-image: url('img/ceo.jpeg');
+    /* Set your image here */
     border-radius: 10px;
     background-position: center;
     background-size: cover;
-    height: 350px; /* Height for image */
+    height: 400px;
+    /* Height for image */
+}
+
+/* leaders section */
+
+
+.team-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.team-intro {
+    flex: 1;
+    max-width: 500px;
+    padding: 1rem 2rem;
+}
+
+.team-intro h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.team-intro p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.8;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 30px;
+    flex: 2;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #aaa;
+}
+
+.team-member h4 {
+    margin: 10px 0 5px;
+    font-size: 16px;
+}
+
+.team-member p {
+    font-size: 14px;
+    color: #555;
 }
 
 /* projects css */
@@ -309,7 +390,8 @@ nav ul li a:hover {
 .projects-heading {
     font-size: 45px;
     font-weight: 900;
-    background: linear-gradient(to right, #153823, #0c2642); /* Gradient colors */
+    background: linear-gradient(to right, #153823, #0c2642);
+    /* Gradient colors */
     color: transparent;
     background-clip: text;
     text-align: center;
@@ -346,7 +428,8 @@ nav ul li a:hover {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 20px;
-    gap: 20px; /* Added space between the images */
+    gap: 20px;
+    /* Added space between the images */
 }
 
 .project-category {
@@ -354,12 +437,14 @@ nav ul li a:hover {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    align-items: center; /* Align images horizontally */
+    align-items: center;
+    /* Align images horizontally */
 }
 
 .project-category img {
-    width: 120px; /* Adjust the size of the images */
-    height: auto;
+    width: 200px;
+    /* Adjust the size of the images */
+    height: 200px;
     border-radius: 8px;
     transition: transform 0.3s ease;
 }
@@ -390,71 +475,146 @@ nav ul li a:hover {
 }
 
 /* Active Links - Show the right images */
-.projects-nav .show-all.active + .projects-gallery .show-all-images {
-    display: flex;
-}
-.projects-nav .pipe-services.active + .projects-gallery .pipe-services-images {
-    display: flex;
-}
-.projects-nav .drilling.active + .projects-gallery .drilling-images {
+.projects-nav .show-all.active+.projects-gallery .show-all-images {
     display: flex;
 }
 
-/* Footer Styling */
+.projects-nav .pipe-services.active+.projects-gallery .pipe-services-images {
+    display: flex;
+}
+
+.projects-nav .drilling.active+.projects-gallery .drilling-images {
+    display: flex;
+}
+
+/* icon hover */
+
+.custom-floating-btn-wrapper {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.custom-toggle-btn {
+    background-color: #333;
+    color: #fff;
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-toggle-btn:hover {
+    background-color: #555;
+}
+
+.custom-social-icons {
+    display: none;
+    margin-bottom: 10px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.custom-floating-btn-wrapper:hover .custom-social-icons {
+    display: flex;
+}
+
+.custom-social-icons a {
+    background-color: #fff;
+    width: 42px;
+    height: 42px;
+    color: #333;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    font-size: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.custom-social-icons a:hover {
+    background-color: #25D366;
+    color: white;
+}
+
+.custom-social-icons a:nth-child(2):hover {
+    background-color: #0077B5;
+}
+
 
 /* Footer Styling */
 footer {
     display: flex;
     justify-content: space-around;
     padding: 30px;
-    background-color: #fff; /* White background */
+    background-color: #fff;
+    /* White background */
     text-align: left;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.253); /* Subtle shadow */
-    margin-top: 30px; /* Adds space after footer */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.253);
+    /* Subtle shadow */
+    margin-top: 30px;
+    /* Adds space after footer */
 }
 
 .footer-section {
-    flex: 1; /* Equal width for each section */
-    padding: 0 20px; /* Space between sections */
+    flex: 1;
+    /* Equal width for each section */
+    padding: 0 20px;
+    /* Space between sections */
 }
 
 footer h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
-    color: #333; /* Dark text for headings */
+    color: #333;
+    /* Dark text for headings */
 }
 
 footer p {
     font-size: 1rem;
-    color: #555; /* Lighter text color for paragraphs */
+    color: #555;
+    /* Lighter text color for paragraphs */
     line-height: 1.5;
 }
 
 footer a {
     text-decoration: none;
-    color: #131313; /* Blue color for links */
+    color: #131313;
+    /* Blue color for links */
     transition: color 0.3s;
     line-height: 1.5;
 }
 
 footer a:hover {
-    color: #4e4e4e; /* Darker blue on hover */
+    color: #4e4e4e;
+    /* Darker blue on hover */
 }
 
 footer .whatsapp-icon img {
-    width: 50px; /* Set size for WhatsApp icon */
+    width: 50px;
+    /* Set size for WhatsApp icon */
     height: 50px;
     transition: transform 0.3s;
 }
 
 footer .whatsapp-icon img:hover {
-    transform: scale(1.1); /* Slight zoom on hover */
+    transform: scale(1.1);
+    /* Slight zoom on hover */
 }
 
 @media (max-width: 768px) {
     footer {
-        flex-direction: column; /* Stack sections vertically on smaller screens */
+        flex-direction: column;
+        /* Stack sections vertically on smaller screens */
         text-align: center;
     }
 
@@ -495,25 +655,30 @@ footer .whatsapp-icon img:hover {
 /* Responsive Styles */
 @media (max-width: 768px) {
     .projects-nav ul {
-        flex-direction: column; /* Stack the links vertically on smaller screens */
+        flex-direction: column;
+        /* Stack the links vertically on smaller screens */
     }
 
     .project-category img {
-        width: 90px; /* Adjust image size on smaller screens */
+        width: 90px;
+        /* Adjust image size on smaller screens */
     }
 }
 
 @media (max-width: 480px) {
     .project-category img {
-        width: 70px; /* Even smaller image size for mobile devices */
+        width: 70px;
+        /* Even smaller image size for mobile devices */
     }
 
     .projects-nav a {
-        font-size: 14px; /* Smaller text size for mobile */
+        font-size: 14px;
+        /* Smaller text size for mobile */
     }
 
     .projects-gallery {
-        gap: 10px; /* Reduce gap between images */
+        gap: 10px;
+        /* Reduce gap between images */
     }
 }
 
@@ -521,52 +686,67 @@ footer .whatsapp-icon img:hover {
 /* For smaller screens like tablets */
 @media (max-width: 1024px) {
     .overview {
-        padding: 1.5rem 5rem; /* Less padding for smaller screens */
+        padding: 1.5rem 5rem;
+        /* Less padding for smaller screens */
     }
-    
+
     .overview-content {
-        flex-direction: column; /* Stack the text and image vertically */
+        flex-direction: column;
+        /* Stack the text and image vertically */
         justify-content: center;
     }
-    
+
     .overview-text {
-        width: 100%; /* Take full width */
-        text-align: center; /* Center text */
+        width: 100%;
+        /* Take full width */
+        text-align: center;
+        /* Center text */
     }
 
     .overview-image {
-        width: 80%; /* Make image take more width */
-        height: 250px; /* Adjust height */
+        width: 80%;
+        /* Make image take more width */
+        height: 250px;
+        /* Adjust height */
     }
 
     .overview-text h2 {
-        font-size: 40px; /* Adjust font size for smaller screens */
+        font-size: 40px;
+        /* Adjust font size for smaller screens */
     }
 }
 
 /* For smaller screens like mobile */
 @media (max-width: 768px) {
     .overview {
-        padding: 1.5rem 2rem; /* Reduce padding further */
+        padding: 1.5rem 2rem;
+        /* Reduce padding further */
     }
-    
+
     .overview-content {
-        flex-direction: column; /* Stack text and image vertically */
-        align-items: center; /* Center items */
+        flex-direction: column;
+        /* Stack text and image vertically */
+        align-items: center;
+        /* Center items */
     }
 
     .overview-text {
-        width: 100%; /* Full width */
-        text-align: center; /* Center the text */
+        width: 100%;
+        /* Full width */
+        text-align: center;
+        /* Center the text */
     }
 
     .overview-image {
-        width: 100%; /* Make image full width */
-        height: 200px; /* Adjust height */
+        width: 100%;
+        /* Make image full width */
+        height: 200px;
+        /* Adjust height */
     }
 
     .overview-text h2 {
-        font-size: 30px; /* Smaller font size */
+        font-size: 30px;
+        /* Smaller font size */
     }
 }
 
@@ -582,11 +762,13 @@ footer .whatsapp-icon img:hover {
         width: 100%;
         gap: 10px;
         margin-top: 10px;
-        display: none; /* Hide by default on small screens */
+        display: none;
+        /* Hide by default on small screens */
     }
 
     nav ul.active {
-        display: block; /* Show when active */
+        display: block;
+        /* Show when active */
     }
 
     nav ul li {
@@ -596,16 +778,8 @@ footer .whatsapp-icon img:hover {
 
     /* Show the hamburger icon on mobile */
     .hamburger {
-        display: block; /* Show hamburger only on small screens */
-    }
-
-    .hero {
-        height: auto;
-        padding: 3rem 1rem;
-    }
-
-    .hero h1 {
-        font-size: 1.8rem;
+        display: block;
+        /* Show hamburger only on small screens */
     }
 
     .service-container {
@@ -632,8 +806,28 @@ footer .whatsapp-icon img:hover {
         padding: 8px 16px;
         font-size: 0.9rem;
     }
+}
 
-    .hero h1 {
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
         font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.75rem;
+        margin-bottom: 25px;
+    }
+
+    .leaders-container {
+        grid-template-columns: repeat(2, 1fr);
+        /* Two columns on tablet-sized screens */
     }
 }
