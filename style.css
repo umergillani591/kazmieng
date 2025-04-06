@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f4f4f4;
+    background: #eeeeee94;
 }
 
 /* Header Styling */
@@ -30,48 +30,83 @@ header {
 
 /* Nav Styling */
 nav {
+    background-color: rgb(255, 255, 255);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1.5rem 2rem;
     flex-wrap: wrap;
-    position: absolute;
-    top: 0;
-    width: 90%;
+    width: 100%;
     z-index: 10;
-    background: transparent; /* transparent background */
+    position: relative; /* changed from absolute */
 }
 
+
 /* Logo Styling */
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
-    z-index: 11;
+.header-logo {
+    width: 80px; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure it doesn't exceed the container width */
 }
+
 
 /* Navigation list styling */
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 45px;
     flex-wrap: wrap;
     padding: 0;
     margin: 0;
 }
 
+
 /* Navigation list items */
 nav ul li {
     display: inline;
+    position: relative;
+    padding-bottom: 5px;
 }
 
 /* Links Styling */
 nav ul li a {
-    color: white;
+    background: linear-gradient(to right, #153823, #0c2642); /* Gradient colors */
+    color: transparent;
+    background-clip: text;
     text-decoration: none;
-    font-size: 1.1rem;
-    z-index: 11;
+    font-size: 1.3rem;
+    font-weight: 700;
+    /* z-index: 11; */
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
 }
+
+/* Underline Effect */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #000000;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Animation */
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+/* Optional: Change text color on hover */
+nav ul li a:hover {
+    color: #000000;
+}
+
 
 /* Hero Section Styling */
 .hero {
@@ -82,7 +117,9 @@ nav ul li a {
     justify-content: center;
     align-items: center;
     text-align: center;
+    /* margin-top: 80px; */
 }
+
 
 .bg-video {
     position: absolute;
@@ -97,24 +134,31 @@ nav ul li a {
 
 .hero-content {
     position: relative;
-    z-index: 1;
+    /* z-index: 1; */
     color: #fff;
     animation: fadeIn 2s ease-in-out;
-    font-size: x-large;
+    font-size: 20px;
 }
 
 .hero-content h1 {
+    font-size: 70px;
+    background: linear-gradient(to right, #65997b, #404e5f); /* Gradient colors */
+    color: transparent;
+    background-clip: text;
+}
+
+/* .hero-content h1 {
     text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.747);
 }
 
 .hero-content .btn {
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.6);
-}
+} */
 
 /* Button Styling */
 .btn {
     display: inline-block;
-    background: #ff6f00;
+    background: linear-gradient(to right, #153823, #0c2642); 
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
@@ -123,8 +167,20 @@ nav ul li a {
 }
 
 .btn:hover {
-    background: #e65c00;
+    background: #093ece;
 }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* Services Section */
 .service-container {
@@ -138,14 +194,13 @@ nav ul li a {
 .service-card {
     background: #fff;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    /* text-align: center; */
     transition: transform 0.3s ease-in-out;
     flex: 1 1 250px;
     max-width: 300px;
     height: 350px;
-    line-height: 1.8;
 }
 
 .service-card:hover {
@@ -154,34 +209,365 @@ nav ul li a {
 
 .services-heading {
     text-align: center;
-    font-size: 2.2rem;
-    color: #222;
+    font-size: 2.8rem;
+    background: linear-gradient(to right, #153823, #0c2642); /* Gradient colors */
+    color: transparent;
+    background-clip: text;
     margin-bottom: 2rem;
-    font-weight: bold;
-    letter-spacing: 1px;
+    font-weight: 900;
+}
+
+.servicep {
+    line-height: 1.8;
 }
 
 .service-card-title {
     font-size: 1.6rem;
     font-weight: 700;
     color: #404244;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-bottom: 2px solid #000000;
-    display: inline-block;
+    /* text-transform: uppercase;
+    letter-spacing: 1px; */
+    /* border-bottom: 2px solid #000000; */
+    /* display: inline-block; */
     margin-bottom: 12px;
     padding-bottom: 4px;
 }
 
+.service-card i{
+    font-size: 30px;
+    margin-top: 5px;
+    margin-left: 5px;
+    background: linear-gradient(to right, #153823, #0c2642);
+    background-clip: text;           
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.services-btn-container {
+    display: flex;
+    justify-content: center; /* Center the button */
+    margin-top: 10px; /* Add space between cards and button */
+    margin-bottom: 40px;
+}
+
+.service-btn {
+    background: linear-gradient(to right, #153823, #0c2642);  
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.service-btn:hover {
+    background: linear-gradient(to right, #1b492e, #123861);  
+}
+
+/* overview css */
+.overview {
+    position: relative;
+    color: white; /* Ensure text color is white for contrast */
+    background-image: linear-gradient(to right, #263a35, #162a3d);
+    display: flex; /* Use flexbox to arrange content */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    padding: 1.5rem 10rem; /* Adjust padding */
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+}
+
+.overview-content {
+    display: flex; /* Flex container for text and image */
+    justify-content: space-between; /* Space between text and image */
+    align-items: center; /* Vertically center the items */
+    width: 100%; /* Full width */
+}
+
+.overview-text {
+    text-align: left;
+    width: 500px;
+    line-height: 1.8;
+}
+
+.overview-text h2 {
+    margin: 0;
+    font-size: 50px;
+}
+
+.overview-image {
+    width: 40%; /* Adjust size */
+    background-image: url('img/img4.jpeg'); /* Set your image here */
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    height: 350px; /* Height for image */
+}
+
+/* projects css */
+
+.projects-heading {
+    font-size: 45px;
+    font-weight: 900;
+    background: linear-gradient(to right, #153823, #0c2642); /* Gradient colors */
+    color: transparent;
+    background-clip: text;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+
+.projects {
+    text-align: center;
+    padding: 20px;
+}
+
+.projects-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.projects-nav a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.projects-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px; /* Added space between the images */
+}
+
+.project-category {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    align-items: center; /* Align images horizontally */
+}
+
+.project-category img {
+    width: 120px; /* Adjust the size of the images */
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.project-category img:hover {
+    transform: scale(1.1);
+}
+
+.see-more-btn {
+    font-size: 16px;
+    color: rgb(47, 85, 58);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.see-more-btn:hover {
+    color: #0b223a;
+}
+
+.see-more-btn:focus {
+    outline: none;
+}
+
+/* Show All Section */
+.show-all-images {
+    display: flex;
+}
+
+/* Active Links - Show the right images */
+.projects-nav .show-all.active + .projects-gallery .show-all-images {
+    display: flex;
+}
+.projects-nav .pipe-services.active + .projects-gallery .pipe-services-images {
+    display: flex;
+}
+.projects-nav .drilling.active + .projects-gallery .drilling-images {
+    display: flex;
+}
+
+/* Footer Styling */
+
 /* Footer Styling */
 footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    background-color: #fff; /* White background */
+    text-align: left;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.253); /* Subtle shadow */
+    margin-top: 30px; /* Adds space after footer */
+}
+
+.footer-section {
+    flex: 1; /* Equal width for each section */
+    padding: 0 20px; /* Space between sections */
+}
+
+footer h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333; /* Dark text for headings */
+}
+
+footer p {
+    font-size: 1rem;
+    color: #555; /* Lighter text color for paragraphs */
+    line-height: 1.5;
+}
+
+footer a {
+    text-decoration: none;
+    color: #131313; /* Blue color for links */
+    transition: color 0.3s;
+    line-height: 1.5;
+}
+
+footer a:hover {
+    color: #4e4e4e; /* Darker blue on hover */
+}
+
+footer .whatsapp-icon img {
+    width: 50px; /* Set size for WhatsApp icon */
+    height: 50px;
+    transition: transform 0.3s;
+}
+
+footer .whatsapp-icon img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+        text-align: center;
+    }
+
+    .footer-section {
+        padding: 10px 0;
+    }
+}
+
+/* Footer layout adjustments for small screens */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .whatsapp-icon img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+.footer-bpara {
     background: #333;
     color: #fff;
+    margin: 0;
     text-align: center;
     padding: 1rem 0;
     position: relative;
-    bottom: 0;
     width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .projects-nav ul {
+        flex-direction: column; /* Stack the links vertically on smaller screens */
+    }
+
+    .project-category img {
+        width: 90px; /* Adjust image size on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .project-category img {
+        width: 70px; /* Even smaller image size for mobile devices */
+    }
+
+    .projects-nav a {
+        font-size: 14px; /* Smaller text size for mobile */
+    }
+
+    .projects-gallery {
+        gap: 10px; /* Reduce gap between images */
+    }
+}
+
+
+/* For smaller screens like tablets */
+@media (max-width: 1024px) {
+    .overview {
+        padding: 1.5rem 5rem; /* Less padding for smaller screens */
+    }
+    
+    .overview-content {
+        flex-direction: column; /* Stack the text and image vertically */
+        justify-content: center;
+    }
+    
+    .overview-text {
+        width: 100%; /* Take full width */
+        text-align: center; /* Center text */
+    }
+
+    .overview-image {
+        width: 80%; /* Make image take more width */
+        height: 250px; /* Adjust height */
+    }
+
+    .overview-text h2 {
+        font-size: 40px; /* Adjust font size for smaller screens */
+    }
+}
+
+/* For smaller screens like mobile */
+@media (max-width: 768px) {
+    .overview {
+        padding: 1.5rem 2rem; /* Reduce padding further */
+    }
+    
+    .overview-content {
+        flex-direction: column; /* Stack text and image vertically */
+        align-items: center; /* Center items */
+    }
+
+    .overview-text {
+        width: 100%; /* Full width */
+        text-align: center; /* Center the text */
+    }
+
+    .overview-image {
+        width: 100%; /* Make image full width */
+        height: 200px; /* Adjust height */
+    }
+
+    .overview-text h2 {
+        font-size: 30px; /* Smaller font size */
+    }
 }
 
 /* Media Queries for Responsiveness */
@@ -205,6 +591,7 @@ footer {
 
     nav ul li {
         width: 100%;
+        display: inline-block;
     }
 
     /* Show the hamburger icon on mobile */

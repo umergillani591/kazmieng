@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LPG Engineering</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d94febef27.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
         <nav>
-            <div class="logo">LPG Engineering</div>
+            <a href="http://www.kazmieng.com" target="_blank">
+                <img src="img/logo.png" alt="Kazmi Engineering Logo" class="header-logo">
+            </a>
             <!-- Hamburger button for mobile view -->
             <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
@@ -32,35 +34,166 @@
             Your browser does not support the video tag.
         </video>
         <div class="hero-content">
-            <h1>Welcome to Our Service</h1>
+            <h1>Oil & Gas Services</h1>
+            <p>Adding exploration and boosting production</p>
             <a href="#" class="btn">Get Started</a>
         </div>
     </section>
+
+    <section class="overview">
+        <div class="overview-content">
+            <div class="overview-text">
+                <h2>Overview</h2>
+                <p>Kazmi Engineering was founded in 1995 in response to safety violations and the lack of technical
+                    expertise in the growing LPG sector. The first LPG quota was issued in 1972–73 from the Dhullian Oil
+                    Field, and as the industry expanded, the need for experienced professionals became critical. With
+                    strong field experience, Kazmi Engineering aimed to ensure safe, ethical, and efficient LPG plant
+                    installations.
+                    <br>
+                    The company quickly built a solid reputation for quality service, safety standards, and ethical
+                    practices. Today, it serves marketing companies across all provinces, contributing to the energy
+                    sector with commitment and integrity. The founder takes pride in the firm’s positive impact and
+                    remains dedicated to its continued growth and responsible service.
+                </p>
+            </div>
+            <div class="overview-image"></div> <!-- Image beside the text -->
+        </div>
+    </section>
+
 
     <section id="services">
         <h2 class="services-heading">Our Services</h2>
         <div class="service-container">
             <div class="service-card">
-                <i class="fas fa-gas-pump"></i>
-                <h3 class="service-card-title">Gas Installation</h3>
-                <p>We provide safe, certified, and professional LPG gas installations for both residential and commercial properties...</p>
+                <i class="fas fa-lightbulb"></i>
+                <h3 class="service-card-title">Consultancy & Feasibility Studies</h3>
+                <p class="servicep">Kazmi offers expert guidance for new and existing LPG projects.
+
+                    They assess technical, financial, and safety aspects.
+
+                    Helps clients avoid risks and make informed decisions.
+
+                    Great for startups and expanding LPG businesses.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-expand-arrows-alt"></i>
+                <h3 class="service-card-title">Expansion Projects</h3>
+                <p class="servicep">Kazmi upgrades and expands existing LPG facilities safely and efficiently.
+
+                    They design scalable solutions that fit current setups.
+
+                    New systems integrate smoothly without disrupting operations.
+
+                    Ideal for companies looking to increase capacity.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-vial"></i>
+                <h3 class="service-card-title">Requalification of Vessels</h3>
+                <p class="servicep">Kazmi Engineering performs certified inspections on storage tanks and bowsers,
+                    ensuring safety and compliance. Only qualified vessels are reapproved for use.</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-tools"></i>
-                <h3 class="service-card-title">Maintenance</h3>
-                <p>Our routine inspections help detect potential issues before they become serious. We offer timely repairs and maintenance services...</p>
+                <h3 class="service-card-title">Revalidation of Plants</h3>
+                <p class="servicep">Kazmi Engineering offers safety checks and system upgrades for aging LPG plants.
+                    They inspect for wear, damage, and outdated parts, ensuring compliance and reducing risks.
+                    Revalidation boosts both safety and performance.</p>
             </div>
             <div class="service-card">
-                <i class="fas fa-fire"></i>
-                <h3 class="service-card-title">Leak Detection</h3>
-                <p>We use advanced technology to detect gas leaks quickly and accurately, ensuring maximum safety...</p>
+                <i class="fas fa-gas-pump"></i>
+                <h3 class="service-card-title">LPG Auto Refueling Stations</h3>
+                <p class="servicep">Kazmi Engineering designs and builds LPG auto refueling stations in Pakistan and
+                    Afghanistan, offering planning, installation, safety systems, and staff training. Each station is
+                    customized for local needs while meeting safety and environmental standards.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-cogs"></i>
+                <h3 class="service-card-title">Commissioning of LPG Plants</h3>
+                <p class="servicep">Kazmi Engineering manages the complete setup and testing of LPG plants, ensuring
+                    safety and functionality. This includes trial runs, system checks, and staff training for smooth
+                    operations. Their engineers oversee the process until the plant is fully ready for safe use.</p>
+            </div>
+
+        </div>
+        <div class="services-btn-container">
+            <button class="service-btn" onclick="window.open('img/KE-profile.pdf', '_blank')">Learn More</button>
+        </div>
+
+    </section>
+
+    <section class="projects">
+        <!-- Gradient Heading -->
+        <h2 class="projects-heading">Our Projects</h2>
+    
+        <div class="projects-nav">
+            <ul>
+                <li><a href="#" class="show-all">Show All /</a></li>
+                <li><a href="#" class="pipe-services">Auto Station /</a></li>
+                <li><a href="#" class="drilling">Bulk Installation</a></li>
+            </ul>
+        </div>
+    
+        <div class="projects-gallery">
+            <div class="show-all-images project-category">
+                <!-- Images for Show All -->
+                <img src="img/auto.jpeg" alt="Project 1">
+                <img src="img/station.jpeg" alt="Project 2">
+                <img src="img/bulk.jpeg" alt="Project 3">
+                <img src="img/install.jpeg" alt="Project 4">
+                <!-- Add more images here -->
+                <div>
+                    <button class="see-more-btn" onclick="openPDF('img/KE-profile.pdf')">See More</button>
+                </div>
+            </div>
+            <div class="pipe-services-images project-category">
+                <!-- Images for Pipe Services -->
+                <img src="img/auto.jpeg" alt="Pipe Service 1">
+                <img src="img/station.jpeg" alt="Pipe Service 2">
+                <!-- Add more pipe service images here -->
+                <div>
+                    <button class="see-more-btn" onclick="openPDF('img/KE-profile.pdf')">See More</button>
+                </div>
+            </div>
+            <div class="drilling-images project-category">
+                <!-- Images for Drilling -->
+                <img src="img/bulk.jpeg" alt="Drilling Project 1">
+                <img src="img/install.jpeg" alt="Drilling Project 2">
+                <!-- Add more drilling images here -->
+                <div>
+                    <button class="see-more-btn" onclick="openPDF('img/KE-profile.pdf')">See More</button>
+                </div>
             </div>
         </div>
     </section>
-
+    
     <footer>
-        <p>&copy; 2024 LPG Engineering. All rights reserved.</p>
+        <div class="footer-section logo">
+            <a href="http://www.kazmieng.com" target="_blank">
+                <img src="img/logo.png" alt="Kazmi Engineering Logo" class="footer-logo">
+            </a>
+        </div>
+        <div class="footer-section contact-info">
+            <h3><i class="fas fa-phone-alt"></i> Contact Info</h3>
+            <p><strong>ISLAMABAD:</strong> House No. 296, Street No. 10, Zaraj Housing Society</p>
+            <p><strong>KARACHI:</strong> 1st Floor, App. No. 1, PLOT 6-E, DHA, Karachi</p>
+            <p><strong><i class="fas fa-phone"></i> Phone:</strong> +92(300)8529713, +92(300)8549713</p>
+        </div>        
+        <div class="footer-section social-links">
+            <h3><i class="fab fa-whatsapp"></i> Follow Us</h3>
+            <a href="https://wa.me/+923008529713" target="_blank" class="whatsapp-icon">
+                <img src="img/img5.png" alt="WhatsApp">
+            </a>
+            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:info@kazmiengineering.com">info@kazmiengineering.com</a></p>
+            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:kazmiengineering@gmail.com">kazmiengineering@gmail.com</a></p>
+        </div>
+    
+        <div class="footer-section website-info">
+            <h3><i class="fas fa-globe"></i> Website</h3>
+            <p><a href="http://www.kazmieng.com" target="_blank">www.kazmieng.com</a></p>
+        </div>
     </footer>
+    <p class="footer-bpara">&copy; 2024 LPG Engineering. All rights reserved.</p>
+    
 
     <!-- Script for hamburger toggle -->
     <script>
@@ -68,6 +201,68 @@
             const navLinks = document.getElementById("nav-links");
             navLinks.classList.toggle("active");
         });
+
+        // js for the project nav
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const showAllLink = document.querySelector('.show-all');
+            const pipeServicesLink = document.querySelector('.pipe-services');
+            const drillingLink = document.querySelector('.drilling');
+
+            const showAllImages = document.querySelector('.show-all-images');
+            const pipeServicesImages = document.querySelector('.pipe-services-images');
+            const drillingImages = document.querySelector('.drilling-images');
+
+            // Function to remove the active class from all links
+            function removeActiveClass() {
+                showAllLink.classList.remove('active');
+                pipeServicesLink.classList.remove('active');
+                drillingLink.classList.remove('active');
+            }
+
+            // Function to hide all images
+            function hideAllImages() {
+                showAllImages.style.display = 'none';
+                pipeServicesImages.style.display = 'none';
+                drillingImages.style.display = 'none';
+            }
+
+            // Event listener for "Show All" link
+            showAllLink.addEventListener('click', function (e) {
+                e.preventDefault();
+                removeActiveClass();
+                showAllLink.classList.add('active');
+                hideAllImages();
+                showAllImages.style.display = 'flex';
+            });
+
+            // Event listener for "Pipe Services" link
+            pipeServicesLink.addEventListener('click', function (e) {
+                e.preventDefault();
+                removeActiveClass();
+                pipeServicesLink.classList.add('active');
+                hideAllImages();
+                pipeServicesImages.style.display = 'flex';
+            });
+
+            // Event listener for "Drilling" link
+            drillingLink.addEventListener('click', function (e) {
+                e.preventDefault();
+                removeActiveClass();
+                drillingLink.classList.add('active');
+                hideAllImages();
+                drillingImages.style.display = 'flex';
+            });
+
+            // Initially show all images
+            showAllImages.style.display = 'flex';
+        });
+
+        // see more
+
+        function openPDF(pdfPath) {
+            window.open(pdfPath, '_blank');
+        }
     </script>
 
     <script src="script.js"></script>
