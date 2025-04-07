@@ -150,6 +150,7 @@ nav ul li a:hover {
     opacity: 1;
 }
 
+/* 
 .hero-content {
     position: relative;
     z-index: 2;
@@ -165,7 +166,7 @@ nav ul li a:hover {
     font-size: 3rem;
     font-weight: bold;
     color: white;
-}
+} */
 
 .slider-dots {
     position: absolute;
@@ -191,6 +192,29 @@ nav ul li a:hover {
 }
 
 /* Services Section */
+.services-heading {
+    text-align: center;
+    font-size: 2.8rem;
+    background: linear-gradient(to right, #153823, #0c2642);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+}
+
+/* Brief Paragraph Style */
+.services-intro {
+    max-width: 900px;
+    margin: 0 auto 2rem auto;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
+    padding: 0 1rem;
+}
+
+/* Container holding all service cards */
 .service-container {
     display: flex;
     justify-content: center;
@@ -199,75 +223,61 @@ nav ul li a:hover {
     flex-wrap: wrap;
 }
 
+/* Each service card */
 .service-card {
     background: #fff;
-    padding: 20px;
+    padding: 25px 18px;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* text-align: center; */
     transition: transform 0.3s ease-in-out;
-    flex: 1 1 250px;
-    max-width: 300px;
-    height: 350px;
+    flex: 1 1 220px;
+    max-width: 240px;
+    text-align: center;
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .service-card:hover {
     transform: translateY(-10px);
 }
 
-.services-heading {
-    text-align: center;
-    font-size: 2.8rem;
-    background: linear-gradient(to right, #153823, #0c2642);
-    /* Gradient colors */
-    color: transparent;
-    background-clip: text;
-    margin-bottom: 2rem;
-    font-weight: 900;
-}
-
-.servicep {
-    line-height: 1.8;
-}
-
-.service-card-title {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #404244;
-    /* text-transform: uppercase;
-    letter-spacing: 1px; */
-    /* border-bottom: 2px solid #000000; */
-    /* display: inline-block; */
-    margin-bottom: 12px;
-    padding-bottom: 4px;
-}
-
+/* Icon inside service card */
 .service-card i {
-    font-size: 30px;
-    margin-top: 5px;
-    margin-left: 5px;
+    font-size: 40px;
+    margin-bottom: 15px;
     background: linear-gradient(to right, #153823, #0c2642);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
+/* Service card title */
+.service-card-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #404244;
+}
+
+/* Button Container */
 .services-btn-container {
     display: flex;
     justify-content: center;
-    /* Center the button */
-    margin-top: 10px;
-    /* Add space between cards and button */
+    margin-top: 20px;
     margin-bottom: 40px;
 }
 
+/* Call-to-action Button */
 .service-btn {
     background: linear-gradient(to right, #153823, #0c2642);
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 26px;
+    font-size: 1rem;
+    font-weight: 500;
     cursor: pointer;
-    text-decoration: none;
     border-radius: 10px;
     transition: background 0.3s ease;
 }
@@ -313,7 +323,7 @@ nav ul li a:hover {
 
 .overview-text h2 {
     margin: 0;
-    font-size: 50px;
+    font-size: 35px;
 }
 
 .overview-image {
@@ -328,41 +338,53 @@ nav ul li a:hover {
     /* Height for image */
 }
 
-/* leaders section */
-
-
+/* Team Section */
 .team-section {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    /* Stack children vertically */
+    align-items: center;
+    /* Center horizontally */
     gap: 40px;
-    justify-content: space-around;
-    align-items: flex-start;
 }
 
+.team-heading {
+    text-align: center;
+    font-size: 2.8rem;
+    background: linear-gradient(to right, #153823, #0c2642);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+}
+
+/* Team Intro Centered */
 .team-intro {
-    flex: 1;
-    max-width: 500px;
-    padding: 1rem 2rem;
-}
-
-.team-intro h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    max-width: 700px;
+    text-align: center;
 }
 
 .team-intro p {
-    font-size: 14px;
+    font-size: 16px;
     color: #333;
     line-height: 1.8;
 }
 
+/* Center the Team Grid */
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 30px;
-    flex: 2;
+    width: 100%;
+    max-width: 1000px;
 }
 
+/* Team Member Card */
 .team-member {
     text-align: center;
 }
@@ -385,108 +407,116 @@ nav ul li a:hover {
     color: #555;
 }
 
-/* projects css */
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
 
-.projects-heading {
-    font-size: 45px;
-    font-weight: 900;
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Special Logo Slider Styles */
+.special-logos {
+    padding: 60px 0;
+    white-space: nowrap;
+    position: relative;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+  
+  .client-heading {
+    text-align: center;
+    font-size: 2.8rem;
     background: linear-gradient(to right, #153823, #0c2642);
-    /* Gradient colors */
     color: transparent;
     background-clip: text;
-    text-align: center;
-    margin-bottom: 20px;
-    padding: 10px;
-}
-
-
-.projects {
-    text-align: center;
-    padding: 20px;
-}
-
-.projects-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    flex-wrap: wrap;
-}
-
-.projects-nav a {
-    text-decoration: none;
-    color: #000000;
-    font-size: 10px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.projects-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
-    gap: 20px;
-    /* Added space between the images */
-}
-
-.project-category {
-    display: none;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    align-items: center;
-    /* Align images horizontally */
-}
-
-.project-category img {
-    width: 200px;
-    /* Adjust the size of the images */
-    height: 200px;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-.project-category img:hover {
-    transform: scale(1.1);
-}
-
-.see-more-btn {
-    font-size: 16px;
-    color: rgb(47, 85, 58);
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.see-more-btn:hover {
-    color: #0b223a;
-}
-
-.see-more-btn:focus {
-    outline: none;
-}
-
-/* Show All Section */
-.show-all-images {
-    display: flex;
-}
-
-/* Active Links - Show the right images */
-.projects-nav .show-all.active+.projects-gallery .show-all-images {
-    display: flex;
-}
-
-.projects-nav .pipe-services.active+.projects-gallery .pipe-services-images {
-    display: flex;
-}
-
-.projects-nav .drilling.active+.projects-gallery .drilling-images {
-    display: flex;
-}
-
+    -webkit-background-clip: text;
+    font-weight: 900;
+    margin-bottom: 3rem;
+  }
+  
+  .special-logos:before,
+  .special-logos:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+  }
+  
+  /* .special-logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+  }
+  
+  .special-logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  } */
+  
+  .special-logos:hover .special-logos-slide {
+    animation-play-state: paused;
+  }
+  
+  .special-logos-slide {
+    display: inline-block;
+    animation: 15s special-slide infinite linear;
+    width: 100%;
+  }
+  
+  .special-logos-slide img {
+    height: 100px;
+    margin: 0 40px;
+    object-fit: contain;
+  }
+  
+  /* Keyframe animation for special logo sliding */
+  @keyframes special-slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Responsive Design for different screen sizes */
+  
+  /* For screens between 768px and 1024px (Tablets) */
+  @media (max-width: 1024px) {
+    .special-logos-slide img {
+      height: 80px; /* Adjust the height of the logos */
+      margin: 0 30px; /* Reduce margin between logos */
+    }
+  }
+  
+  /* For screens between 576px and 768px (Large Mobiles/Small Tablets) */
+  @media (max-width: 768px) {
+    .special-logos-slide img {
+      height: 60px; /* Adjust the height of the logos */
+      margin: 0 20px; /* Reduce margin further */
+    }
+  }
+  
+  /* For screens below 576px (Mobile Devices) */
+  @media (max-width: 576px) {
+    .special-logos-slide img {
+      height: 50px; /* Adjust the height of the logos */
+      margin: 0 10px; /* Tighten the margin */
+    }
+  
+    .client-heading {
+      font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+  }
+  
+  /* Prevent Scroll on Body */
+  body {
+    overflow-x: hidden; /* Hide any potential horizontal overflow */
+  }
+  
 /* icon hover */
 
 .custom-floating-btn-wrapper {
@@ -750,52 +780,46 @@ footer .whatsapp-icon img:hover {
     }
 }
 
-/* Media Queries for Responsiveness */
+/* ================= Responsive Styles ================= */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
         align-items: flex-start;
     }
 
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 2rem;
+        top: 1rem;
+    }
+
     nav ul {
+        display: none;
         flex-direction: column;
         width: 100%;
-        gap: 10px;
-        margin-top: 10px;
-        display: none;
-        /* Hide by default on small screens */
+        margin-top: 60px;
+        gap: 15px;
     }
 
     nav ul.active {
-        display: block;
-        /* Show when active */
+        display: flex;
     }
 
     nav ul li {
         width: 100%;
-        display: inline-block;
     }
 
-    /* Show the hamburger icon on mobile */
-    .hamburger {
+    nav ul li a {
         display: block;
-        /* Show hamburger only on small screens */
-    }
-
-    .service-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service-card {
-        width: 90%;
-        max-width: 100%;
+        width: 100%;
+        padding: 10px 0;
     }
 }
 
 @media (max-width: 480px) {
-    .logo {
-        font-size: 1.2rem;
+    .header-logo {
+        font-size: 1.1rem;
     }
 
     nav ul li a {
@@ -820,14 +844,50 @@ footer .whatsapp-icon img:hover {
     }
 }
 
-@media (max-width: 768px) {
-    .section-title {
-        font-size: 1.75rem;
-        margin-bottom: 25px;
+/* -------------------- Responsive Styles -------------------- */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .service-container {
+        justify-content: center;
+        padding: 1.5rem;
     }
 
-    .leaders-container {
-        grid-template-columns: repeat(2, 1fr);
-        /* Two columns on tablet-sized screens */
+    .service-card {
+        flex: 1 1 45%;
+        max-width: 45%;
+        margin: 10px 0;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    .services-heading {
+        font-size: 2rem;
+    }
+
+    .services-intro {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+    }
+
+    .service-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+        height: auto;
+        padding: 20px 15px;
+    }
+
+    .service-card i {
+        font-size: 30px;
+    }
+
+    .service-card-title {
+        font-size: 1.1rem;
+    }
+
+    .service-btn {
+        padding: 10px 20px;
+        font-size: 0.95rem
     }
 }

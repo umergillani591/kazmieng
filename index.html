@@ -13,11 +13,14 @@
 <body>
     <header>
         <nav>
-            <h1 class="header-logo">KAZMI Engineering</h1>
-            <!-- Hamburger button for mobile view -->
+            <h1 class="header-logo">KAZMI ENGINEERING</h1>
+
+            <!-- Hamburger Icon -->
             <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
+
+            <!-- Navigation Links -->
             <ul id="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
@@ -27,15 +30,16 @@
         </nav>
     </header>
 
+
     <section class="hero">
         <div class="slider">
             <div class="slide active" style="background-image: url('img/img6.jpeg')"></div>
             <div class="slide" style="background-image: url('img/img7.jpeg')"></div>
         </div>
 
-        <div class="hero-content">
+        <!-- <div class="hero-content">
             <h1>LPG Engineering Services</h1>
-        </div>
+        </div> -->
         <div class="slider-dots" id="slider-dots"></div>
     </section>
 
@@ -69,67 +73,55 @@
 
     <section id="services">
         <h2 class="services-heading">Our Services</h2>
+
+        <!-- Brief Introduction Paragraph -->
+        <p class="services-intro">
+            Kazmi Engineering provides end-to-end LPG solutions designed to meet the evolving needs of the energy
+            sector. Our wide range of services includes expert consultancy, feasibility studies, expansion of existing
+            plants, requalification of equipment, safety upgrades for aging infrastructure, and the establishment of
+            modern LPG auto refueling stations. We also specialize in the complete commissioning of new LPG plants with
+            precision and care. With a team of experienced professionals and a commitment to international safety and
+            performance standards, we help businesses operate efficiently, minimize risks, and ensure full regulatory
+            compliance. Whether you're launching a new project or upgrading an existing one, Kazmi Engineering delivers
+            reliable, tailored support at every stage.
+        </p>
+
+        <!-- Services Cards Section -->
         <div class="service-container">
             <div class="service-card">
                 <i class="fas fa-lightbulb"></i>
                 <h3 class="service-card-title">Consultancy & Feasibility Studies</h3>
-                <p class="servicep">Kazmi offers expert guidance for new and existing LPG projects.
-
-                    They assess technical, financial, and safety aspects.
-
-                    Helps clients avoid risks and make informed decisions.
-
-                    Great for startups and expanding LPG businesses.</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-expand-arrows-alt"></i>
                 <h3 class="service-card-title">Expansion Projects</h3>
-                <p class="servicep">Kazmi upgrades and expands existing LPG facilities safely and efficiently.
-
-                    They design scalable solutions that fit current setups.
-
-                    New systems integrate smoothly without disrupting operations.
-
-                    Ideal for companies looking to increase capacity.</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-vial"></i>
                 <h3 class="service-card-title">Requalification of Vessels</h3>
-                <p class="servicep">Kazmi Engineering performs certified inspections on storage tanks and bowsers,
-                    ensuring safety and compliance. Only qualified vessels are reapproved for use.</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-tools"></i>
                 <h3 class="service-card-title">Revalidation of Plants</h3>
-                <p class="servicep">Kazmi Engineering offers safety checks and system upgrades for aging LPG plants.
-                    They inspect for wear, damage, and outdated parts, ensuring compliance and reducing risks.
-                    Revalidation boosts both safety and performance.</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-gas-pump"></i>
                 <h3 class="service-card-title">LPG Auto Refueling Stations</h3>
-                <p class="servicep">Kazmi Engineering designs and builds LPG auto refueling stations in Pakistan and
-                    Afghanistan, offering planning, installation, safety systems, and staff training. Each station is
-                    customized for local needs while meeting safety and environmental standards.</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-cogs"></i>
                 <h3 class="service-card-title">Commissioning of LPG Plants</h3>
-                <p class="servicep">Kazmi Engineering manages the complete setup and testing of LPG plants, ensuring
-                    safety and functionality. This includes trial runs, system checks, and staff training for smooth
-                    operations. Their engineers oversee the process until the plant is fully ready for safe use.</p>
             </div>
-
         </div>
+
         <div class="services-btn-container">
             <button class="service-btn" onclick="window.open('img/KE-profile.pdf', '_blank')">Learn More</button>
         </div>
-
     </section>
 
     <div class="team-section">
         <div class="team-intro">
-            <h2>Our Amazing Team</h2>
+            <h2 class="team-heading">Our Amazing Team</h2>
             <p>Meet the exceptional individuals driving our success. With leadership, strategy, and innovation at the
                 forefront, our team is dedicated to delivering excellence in every project.</p>
         </div>
@@ -178,8 +170,35 @@
         </div>
     </div>
 
-    <section class="projects">
-        <!-- Gradient Heading -->
+    <section class="special-logos">
+        <h2 class="client-heading">Our Clients</h2>
+        <div class="special-logos-slide">
+          <img src="./img/logo.png" />
+          <img src="./img/logo.png" />
+          <img src="./img/logo.png" />
+          <img src="./img/logo.png" />
+          <img src="./img/logo.png" />
+          <img src="./img/logo.png" />
+          <img src="./img/logo.png" />
+          <img src="./img/logo.png" />
+        </div>
+      
+        <div class="special-logos-slide">
+          <img src="./img/logo.png" />
+          <img src="./img/logo.png" />
+          <img src="./img/logo.png" />
+          <img src="./img/logo.png" />
+          <img src="./img/logo.png" />
+          <img src="./img/logo.png" />
+          <img src="./img/logo.png" />
+          <img src="./img/logo.png" />
+        </div>
+      </section>
+      
+      
+
+
+    <!-- <section class="projects">
         <h2 class="projects-heading">Our Projects</h2>
 
         <div class="projects-nav">
@@ -192,36 +211,30 @@
 
         <div class="projects-gallery">
             <div class="show-all-images project-category">
-                <!-- Images for Show All -->
                 <img src="img/auto.jpeg" alt="Project 1">
                 <img src="img/station.jpeg" alt="Project 2">
                 <img src="img/bulk.jpeg" alt="Project 3">
                 <img src="img/install.jpeg" alt="Project 4">
-                <!-- Add more images here -->
                 <div>
                     <button class="see-more-btn" onclick="openPDF('img/KE-profile.pdf')">See More</button>
                 </div>
             </div>
             <div class="pipe-services-images project-category">
-                <!-- Images for Pipe Services -->
                 <img src="img/auto.jpeg" alt="Pipe Service 1">
                 <img src="img/station.jpeg" alt="Pipe Service 2">
-                <!-- Add more pipe service images here -->
                 <div>
                     <button class="see-more-btn" onclick="openPDF('img/KE-profile.pdf')">See More</button>
                 </div>
             </div>
             <div class="drilling-images project-category">
-                <!-- Images for Drilling -->
                 <img src="img/bulk.jpeg" alt="Drilling Project 1">
                 <img src="img/install.jpeg" alt="Drilling Project 2">
-                <!-- Add more drilling images here -->
                 <div>
                     <button class="see-more-btn" onclick="openPDF('img/KE-profile.pdf')">See More</button>
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <div class="custom-floating-btn-wrapper">
         <div class="custom-social-icons">
@@ -309,61 +322,102 @@
 
         setInterval(nextSlide, 5000); // Change every 5s
 
-        // js for the project nav
+        // // js for the project nav
 
-        document.addEventListener('DOMContentLoaded', function () {
-            const showAllLink = document.querySelector('.show-all');
-            const pipeServicesLink = document.querySelector('.pipe-services');
-            const drillingLink = document.querySelector('.drilling');
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     const showAllLink = document.querySelector('.show-all');
+        //     const pipeServicesLink = document.querySelector('.pipe-services');
+        //     const drillingLink = document.querySelector('.drilling');
 
-            const showAllImages = document.querySelector('.show-all-images');
-            const pipeServicesImages = document.querySelector('.pipe-services-images');
-            const drillingImages = document.querySelector('.drilling-images');
+        //     const showAllImages = document.querySelector('.show-all-images');
+        //     const pipeServicesImages = document.querySelector('.pipe-services-images');
+        //     const drillingImages = document.querySelector('.drilling-images');
 
-            // Function to remove the active class from all links
-            function removeActiveClass() {
-                showAllLink.classList.remove('active');
-                pipeServicesLink.classList.remove('active');
-                drillingLink.classList.remove('active');
+        //     // Function to remove the active class from all links
+        //     function removeActiveClass() {
+        //         showAllLink.classList.remove('active');
+        //         pipeServicesLink.classList.remove('active');
+        //         drillingLink.classList.remove('active');
+        //     }
+
+        //     // Function to hide all images
+        //     function hideAllImages() {
+        //         showAllImages.style.display = 'none';
+        //         pipeServicesImages.style.display = 'none';
+        //         drillingImages.style.display = 'none';
+        //     }
+
+        //     // Event listener for "Show All" link
+        //     showAllLink.addEventListener('click', function (e) {
+        //         e.preventDefault();
+        //         removeActiveClass();
+        //         showAllLink.classList.add('active');
+        //         hideAllImages();
+        //         showAllImages.style.display = 'flex';
+        //     });
+
+        //     // Event listener for "Pipe Services" link
+        //     pipeServicesLink.addEventListener('click', function (e) {
+        //         e.preventDefault();
+        //         removeActiveClass();
+        //         pipeServicesLink.classList.add('active');
+        //         hideAllImages();
+        //         pipeServicesImages.style.display = 'flex';
+        //     });
+
+        //     // Event listener for "Drilling" link
+        //     drillingLink.addEventListener('click', function (e) {
+        //         e.preventDefault();
+        //         removeActiveClass();
+        //         drillingLink.classList.add('active');
+        //         hideAllImages();
+        //         drillingImages.style.display = 'flex';
+        //     });
+
+        //     // Initially show all images
+        //     showAllImages.style.display = 'flex';
+        // });
+
+        // infinte slider
+
+        (function () {
+            // Select the special image slider container and slides
+            const specialImageSliderContainer = document.getElementById('specialImageSliderContainer');
+            const specialSliderItems = document.querySelectorAll('.special-slider-item');
+            const slideWidth = specialSliderItems[0].offsetWidth; // Get width of one slide
+            let currentIndex = 0;
+
+            // Clone the slides to create the infinite effect
+            const clonedSliderItems = Array.from(specialSliderItems).map(item => item.cloneNode(true));
+            clonedSliderItems.forEach(item => specialImageSliderContainer.appendChild(item));
+
+            // Function to continuously move the slides
+            function moveSlides() {
+                const offset = -(currentIndex * slideWidth);
+                specialImageSliderContainer.style.transition = "transform 0.5s ease-in-out"; // Transition for smooth sliding
+                specialImageSliderContainer.style.transform = `translateX(${offset}px)`;
+
+                // Update the index to create the loop effect
+                currentIndex++;
+
+                // After the first loop ends, reset to the start position without transition
+                if (currentIndex === specialSliderItems.length) {
+                    setTimeout(() => {
+                        specialImageSliderContainer.style.transition = "transform 0s"; // Instant reset
+                        specialImageSliderContainer.style.transform = "translateX(0)";
+                        currentIndex = 0;
+                    }, 500); // Wait for the animation to finish before resetting
+                }
             }
 
-            // Function to hide all images
-            function hideAllImages() {
-                showAllImages.style.display = 'none';
-                pipeServicesImages.style.display = 'none';
-                drillingImages.style.display = 'none';
+            // Initialize the infinite image slider
+            function startSpecialImageSlider() {
+                setInterval(moveSlides, 3000); // Move every 3 seconds
             }
 
-            // Event listener for "Show All" link
-            showAllLink.addEventListener('click', function (e) {
-                e.preventDefault();
-                removeActiveClass();
-                showAllLink.classList.add('active');
-                hideAllImages();
-                showAllImages.style.display = 'flex';
-            });
-
-            // Event listener for "Pipe Services" link
-            pipeServicesLink.addEventListener('click', function (e) {
-                e.preventDefault();
-                removeActiveClass();
-                pipeServicesLink.classList.add('active');
-                hideAllImages();
-                pipeServicesImages.style.display = 'flex';
-            });
-
-            // Event listener for "Drilling" link
-            drillingLink.addEventListener('click', function (e) {
-                e.preventDefault();
-                removeActiveClass();
-                drillingLink.classList.add('active');
-                hideAllImages();
-                drillingImages.style.display = 'flex';
-            });
-
-            // Initially show all images
-            showAllImages.style.display = 'flex';
-        });
+            // Start the infinite loop for the special image slider
+            startSpecialImageSlider();
+        })();
 
         // see more
 
