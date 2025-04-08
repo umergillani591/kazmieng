@@ -1478,19 +1478,37 @@ footer .whatsapp-icon img:hover {
 /* Container for the contact form */
 .contact_us_2 .container-block.form-wrapper {
     background-color: white;
-    max-width: 1000px; /* Increased max-width */
+    max-width: 900px; /* Increased max-width */
     text-align: center;
     padding: 50px 40px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 20px 7px;
-    border-radius: 6px;
-    margin: 0 auto;
+    border-radius: 20px;
+    position: relative;
+    margin: 300px 0px 0px 120px;
+}
+
+.plain-div {
+    /* border: 1px solid black; */
+    width: 800px;
+    height: 800px;
+    position: absolute;
+    top: 950px;
+    left: 65%; /* Position it to the right of the form */
+    transform: translate(-50%, -50%); /* Pull it back halfway inside */
+    z-index: -1;
+    display: flex;
+    background: linear-gradient(to right, #21633a, #133053);
+    border-radius: 20px;
 }
 
 /* Form heading and subheading styles */
 .contact_us_2 .text-blk.contactus-head {
-    font-size: 36px;
+    font-size: 40px;
     line-height: 50px;
     font-weight: 900;
+    background: linear-gradient(to right, #21633a, #133053);
+    color: transparent;
+    background-clip: text;
 }
 
 .contact_us_2 .text-blk.contactus-subhead {
@@ -1501,10 +1519,10 @@ footer .whatsapp-icon img:hover {
 /* Input fields and textareas */
 .contact_us_2 .input,
 .contact_us_2 .textinput {
-    width: 96%;
+    width: 80%;
     padding: 15px;
-    border: 2px solid #eeeeee;
-    border-radius: 4px;
+    border: 2px solid #bdbdbd;
+    border-radius: 10px;
     font-size: 16px;
     color: black;
 }
@@ -1515,28 +1533,20 @@ footer .whatsapp-icon img:hover {
 
 /* Submit button styles */
 .contact_us_2 .submit-btn {
-    width: 98%;
-    background-color: #03a9f4;
+    width: 40%;
+    background: linear-gradient(to right, #21633a, #133053);
     height: 60px;
     font-size: 20px;
+    margin-top: 20px;
     font-weight: 700;
     color: white;
-    border-radius: 4px;
+    border-radius: 15px;
     cursor: pointer;
     border: none;
 }
 
 .contact_us_2 .submit-btn:hover {
     background-color: #0381fe;
-}
-
-/* Social media links section */
-.contact_us_2 .social-media-links {
-    width: 250px;
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 50px;
-    margin: 0 auto;
 }
 
 .contact_us_2 .link-img {
@@ -1547,56 +1557,66 @@ footer .whatsapp-icon img:hover {
 /* Input labels */
 .contact_us_2 .text-blk.input-title {
     text-align: left;
-    font-size: 14px;
+    font-size: 18px;
     color: #9c9c9c;
     margin-bottom: 5px;
 }
 
-/* Placeholder text styling */
-.contact_us_2 ::placeholder {
-    color: #dadada;
+/* Responsive enhancements for .plain-div */
+@media (max-width: 1024px) {
+    .plain-div {
+        width: 500px;
+        height: 500px;
+        left: 80%;
+        top: 700px;
+    }
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
-    .contact_us_2 .submit-btn,
-    .contact_us_2 .input,
-    .contact_us_2 .textinput {
-        width: 100%;
+    .plain-div {
+        width: 400px;
+        height: 400px;
+        left: 70%;
+        top: 650px;
     }
 
     .contact_us_2 .container-block.form-wrapper {
-        margin-top: 80px;
+        margin: 100px 20px 0 20px;
+        padding: 40px 25px;
     }
 
-    .contact_us_2 .text-blk.contactus-head {
-        font-size: 30px;
-        line-height: 40px;
+    .contact_us_2 .submit-btn {
+        width: 100%;
+    }
+
+    .contact_us_2 .text-blk.contactus-subhead {
+        font-size: 16px;
+        margin-bottom: 30px;
     }
 }
 
 @media (max-width: 500px) {
+    .plain-div {
+        display: none;
+    }
+
     .contact_us_2 .container-block.form-wrapper {
-        padding: 50px 15px;
-        margin-top: 60px;
+        margin: 60px 10px 0 10px;
+        padding: 30px 15px;
     }
 
     .contact_us_2 .text-blk.contactus-head {
-        font-size: 26px;
-        line-height: 34px;
+        font-size: 24px;
+        line-height: 32px;
     }
 
-    .contact_us_2 .input {
-        height: 45px;
+    .contact_us_2 .text-blk.contactus-subhead {
+        font-size: 14px;
     }
-}
 
-/* Background color for the form container with a linear gradient */
-.contact_us_2 .blueBG {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    height: 300px;
-    background: linear-gradient(135deg, #03a9f4, #00bcd4); /* Linear gradient background */
+    .contact_us_2 .input,
+    .contact_us_2 .textinput,
+    .contact_us_2 .submit-btn {
+        width: 100%;
+    }
 }
