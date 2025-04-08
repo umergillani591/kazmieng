@@ -1620,3 +1620,181 @@ footer .whatsapp-icon img:hover {
         width: 100%;
     }
 }
+
+/*////////////////////////////////////////// career page css //////////////////////////////*/
+.career-wrapper * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .career-wrapper {
+    background: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 2rem;
+  }
+  
+  .career-wrapper h1, .career-wrapper h2, .career-wrapper h3 {
+    background: linear-gradient(to right, #21633a, #133053);
+    color: transparent;
+    background-clip: text;
+  }
+  
+  .career-wrapper section {
+    margin-bottom: 4rem;
+  }
+  
+  .career-container {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .career-intro-section {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .career-intro-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .career-reason-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .career-card {
+    background: white;
+    padding: 2rem;
+    min-height: 250px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+  }
+  
+  .career-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .career-team-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .career-letter-head {
+    text-align: center;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 2rem;
+  }
+  
+  .career-team-section .career-team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .career-team-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+  
+  .career-team-card h3 {
+    margin-top: 0.5rem;
+    color: #457b9d;
+  }
+  
+  .career-form-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .career-form-section form {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 1000px;
+  }
+  
+  .career-form-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .career-form-section label {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+  
+  .career-form-section input,
+  .career-form-section select,
+  .career-form-section textarea {
+    padding: 0.75rem 1rem;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  
+  .career-form-section input:focus,
+  .career-form-section select:focus,
+  .career-form-section textarea:focus {
+    outline: none;
+    border-color: #1d3557;
+    box-shadow: 0 0 5px rgba(29, 53, 87, 0.3);
+  }
+  
+  .career-form-section button {
+    background: #1d3557;
+    color: white;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    width: 50%;
+    margin: 0 auto;
+    transition: background 0.3s;
+  }
+  
+  .career-form-section button:hover {
+    background: #457b9d;
+  }
+  
+  @media (max-width: 768px) {
+    .career-intro-section h1 {
+      font-size: 2rem;
+    }
+  
+    .career-form-section form {
+      padding: 1.5rem;
+    }
+  
+    .career-form-section input,
+    .career-form-section select,
+    .career-form-section textarea {
+      width: 100%;
+    }
+  
+    .career-form-section button {
+      width: 100%;
+    }
+  }
+  

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://kit.fontawesome.com/d94febef27.js" crossorigin="anonymous"></script>
+  <title>Careers - Kazmi Engineering</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h1 class="header-logo">KAZMI ENGINEERING</h1>
+
+      <!-- Hamburger Icon -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Navigation Links -->
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#career">Careers</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="service-banner">
+    <div class="service-banner-content">
+      <h1>Kazmi Engineering</h1>
+      <p>We specialize in delivering high-quality LPG engineering solutions<br> tailored to meet industrial and
+        commercial needs.</p>
+    </div>
+  </div>
+
+  <div class="career-wrapper">
+    <div class="career-container">
+      <!-- Why Join Us -->
+      <section class="career-intro-section">
+        <h1>Why Should You Join Us?</h1>
+        <div class="career-reason-cards">
+          <div class="career-card">
+            <h3>🚀 Growth & Learning</h3>
+            <p>We support your development with training, mentorship, and ongoing education.</p>
+          </div>
+          <div class="career-card">
+            <h3>🤝 Collaborative Culture</h3>
+            <p>Work in a positive, inclusive environment where your voice matters.</p>
+          </div>
+          <div class="career-card">
+            <h3>🌟 Impactful Work</h3>
+            <p>Your projects will make a difference. Join us in creating real-world solutions.</p>
+          </div>
+          <div class="career-card">
+            <h3>🧘‍♀️ Work-Life Balance</h3>
+            <p>Flexible schedules and wellness-focused policies to keep you at your best.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Team -->
+      <section class="career-team-section">
+        <h2>Meet Our Team</h2>
+        <div class="career-letter-head">We believe in people first. Meet the team powering our mission.</div>
+        <div class="career-team-grid">
+          <div class="career-team-card">
+            <h3>Ahsan Kazmi</h3>
+            <p>Lead Engineer – "Innovation isn’t just a buzzword here – it’s our daily drive."</p>
+          </div>
+          <div class="career-team-card">
+            <h3>Fatima Sheikh</h3>
+            <p>Project Manager – "The team spirit is incredible. Everyone truly cares about quality."</p>
+          </div>
+          <div class="career-team-card">
+            <h3>Ali Raza</h3>
+            <p>Software Developer – "The freedom to experiment and learn is unmatched."</p>
+          </div>
+          <div class="career-team-card">
+            <h3>Sara Malik</h3>
+            <p>HR Specialist – "We don’t just build machines, we build careers."</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Career Contact Form -->
+      <section class="career-form-section">
+        <form>
+          <h2>Apply Now</h2>
+          <div>
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div>
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div>
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+          <div>
+            <label for="position">Position You’re Applying For *</label>
+            <input type="text" id="position" name="position" required />
+          </div>
+          <div>
+            <label for="resume">Upload Resume *</label>
+            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required />
+          </div>
+          <div>
+            <label for="linkedin">LinkedIn Profile (optional)</label>
+            <input type="url" id="linkedin" name="linkedin" />
+          </div>
+          <div>
+            <label for="portfolio">Portfolio / Work Samples (optional)</label>
+            <input type="url" id="portfolio" name="portfolio" />
+          </div>
+          <div>
+            <label for="why">Why do you want to join us? *</label>
+            <textarea id="why" name="why" rows="4" required></textarea>
+          </div>
+          <div>
+            <label for="source">How did you hear about us?</label>
+            <select id="source" name="source">
+              <option value="">Select</option>
+              <option value="linkedin">LinkedIn</option>
+              <option value="employee">Employee</option>
+              <option value="website">Website</option>
+              <option value="portal">Job Portal</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div>
+            <label for="start">Preferred Start Date</label>
+            <input type="date" id="start" name="start" />
+          </div>
+          <div>
+            <label for="comments">Additional Comments</label>
+            <textarea id="comments" name="comments" rows="3"></textarea>
+          </div>
+          <button type="submit">Send Application</button>
+        </form>
+      </section>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-section logo">
+      <a href="http://www.kazmieng.com" target="_blank">
+        <img src="img/logo.png" alt="Kazmi Engineering Logo" class="footer-logo">
+      </a>
+    </div>
+    <div class="footer-section contact-info">
+      <h3><i class="fas fa-phone-alt"></i> Contact Info</h3>
+      <p><strong>ISLAMABAD:</strong> House No. 296, Street No. 10, Zaraj Housing Society</p>
+      <p><strong>KARACHI:</strong> 1st Floor, App. No. 1, PLOT 6-E, DHA, Karachi</p>
+      <p><strong><i class="fas fa-phone"></i> Phone:</strong> +92(300)8529713, +92(300)8549713</p>
+    </div>
+    <div class="footer-section social-links">
+      <h3><i class="fab fa-whatsapp"></i> Follow Us</h3>
+      <a href="https://wa.me/+923008529713" target="_blank" class="whatsapp-icon">
+        <img src="img/img5.png" alt="WhatsApp">
+      </a>
+      <p><i class="fas fa-envelope"></i> Email: <a href="mailto:info@kazmiengineering.com">info@kazmiengineering.com</a>
+      </p>
+      <p><i class="fas fa-envelope"></i> Email: <a
+          href="mailto:kazmiengineering@gmail.com">kazmiengineering@gmail.com</a></p>
+    </div>
+
+    <div class="footer-section website-info">
+      <h3><i class="fas fa-globe"></i> Website</h3>
+      <p><a href="http://www.kazmieng.com" target="_blank">www.kazmieng.com</a></p>
+    </div>
+  </footer>
+  <p class="footer-bpara">&copy; 2024 LPG Engineering. All rights reserved.</p>
+
+
+  <script src="script.js"></script>
+
+  <script>
+    // js toggle
+    document.getElementById("hamburger").addEventListener("click", function () {
+      const navLinks = document.getElementById("nav-links");
+      navLinks.classList.toggle("active");
+    });
+  </script>
+
+</body>
+
+</html>
