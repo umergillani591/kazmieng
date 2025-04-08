@@ -1182,9 +1182,9 @@ footer .whatsapp-icon img:hover {
 /* Tablet Styles */
 .tablet {
     background-color: #fff;
-    padding: 30px;
-    width: 400px;
-    height: 100px;
+    padding: 3%;
+    width: 30vw;
+    height: 25vh;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: all 0.3s ease;
@@ -1245,11 +1245,12 @@ footer .whatsapp-icon img:hover {
 
     .core-values-tablets {
         flex-direction: column;
-        gap: 20px;
+        /* gap: 20px; */
     }
 
     .tablet {
         width: 90%;
+        margin: auto;
     }
 }
 
@@ -1257,10 +1258,9 @@ footer .whatsapp-icon img:hover {
 
 /* banner section */
 .service-banner {
-    background-image: url('img/img7.jpeg');
+    background-image: url('img/img7.jpeg'); /* Replace with your image path */
     background-size: cover;
     background-position: center;
-    height: 400px;
     color: white;
     display: flex;
     align-items: center;
@@ -1268,6 +1268,18 @@ footer .whatsapp-icon img:hover {
     width: 100%;
     text-align: left;
     position: relative;
+    height: 400px; /* Default height for larger screens */
+}
+
+.service-banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 0;
 }
 
 .banner-overlay {
@@ -1280,36 +1292,139 @@ footer .whatsapp-icon img:hover {
     left: 0;
     display: flex;
     align-items: center;
-    padding-left: 60px;
-}
-
-.service-banner::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    /* dark overlay */
-    z-index: 0;
+    padding-left: 60px; /* Default padding */
+    z-index: 1;
 }
 
 .service-banner-content {
     z-index: 2;
-    padding: 113px;
+    /* padding: 113px;  */
     background: linear-gradient(to right, #1a3024, #142138);
     clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
-    position: relative;
-    line-height: 1.8;
+    /* position: relative; */
+    /* line-height: 1.8; */
 }
 
 .service-banner-content h1 {
-    font-size: 2rem;
+    font-size: 2rem; /* Default font size */
     font-weight: 800;
     background: linear-gradient(to left, #21633a, #133053);
     color: transparent;
     background-clip: text;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.service-banner-content p {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+/* Media Queries for responsiveness */
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .service-banner {
+        height: 250px;
+    }
+    .banner-overlay {
+        padding-left: 20px;
+        clip-path: polygon(0 0, 90% 0, 70% 100%, 0% 100%);
+    }
+    .service-banner-content {
+        padding: 19.3%;
+        clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+    }
+    .service-banner-content h1 {
+        font-size: 1.2rem;
+    }
+    .service-banner-content p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .service-banner {
+        height: 300px;
+    }
+    .banner-overlay {
+        padding-left: 30px;
+        clip-path: polygon(0 0, 80% 0, 65% 100%, 0% 100%);
+    }
+    .service-banner-content {
+        padding: 15.8%;
+        clip-path: polygon(0 0, 100% 0, 88% 100%, 0% 100%);
+    }
+    .service-banner-content h1 {
+        font-size: 1.5rem;
+    }
+    .service-banner-content p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .service-banner {
+        height: 350px;
+    }
+    .banner-overlay {
+        padding-left: 40px;
+        clip-path: polygon(0 0, 75% 0, 62% 100%, 0% 100%);
+    }
+    .service-banner-content {
+        padding: 13.7%;
+        clip-path: polygon(0 0, 100% 0, 86% 100%, 0% 100%);
+    }
+    .service-banner-content h1 {
+        font-size: 1.7rem;
+    }
+    .service-banner-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .service-banner {
+        height: 400px;
+    }
+    .banner-overlay {
+        padding-left: 50px;
+        clip-path: polygon(0 0, 72% 0, 61% 100%, 0% 100%);
+    }
+    .service-banner-content {
+        padding: 12.3%;
+        clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+    }
+    .service-banner-content h1 {
+        font-size: 1.9rem;
+    }
+    .service-banner-content p {
+        font-size: 1.05rem;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .service-banner {
+        height: 400px;
+    }
+    .banner-overlay {
+        padding-left: 60px;
+        clip-path: polygon(0 0, 70% 0, 60% 100%, 0% 100%);
+    }
+    .service-banner-content {
+        padding: 11.3%;
+        clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+    }
+    .service-banner-content h1 {
+        font-size: 2rem;
+    }
+    .service-banner-content p {
+        font-size: 1rem;
+    }
 }
 
 /* Services Section */
@@ -1352,15 +1467,36 @@ footer .whatsapp-icon img:hover {
 /* Grid layout */
 .services-serpage-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    /* Auto-fit cards in the grid */
+    grid-template-columns: repeat(4, 1fr); /* Default: large screens */
     gap: 20px;
     justify-items: center;
     align-items: center;
     width: 100%;
     max-width: 1200px;
-    /* Optional: To limit the width of the grid */
     margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+    .services-serpage-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Small screens (phones) */
+@media (max-width: 768px) {
+    .services-serpage-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .services-serpage-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Card styling */
@@ -1574,22 +1710,22 @@ footer .whatsapp-icon img:hover {
 /* Container for the contact form */
 .contact_us_2 .container-block.form-wrapper {
     background-color: white;
-    max-width: 900px;
+    max-width: 70vw;
     /* Increased max-width */
     text-align: center;
-    padding: 50px 40px;
+    padding: 10px 40px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 20px 7px;
     border-radius: 20px;
     position: relative;
-    margin: 300px 0px 0px 120px;
+    margin: 180px 0px 0px 120px;
 }
 
 .plain-div {
     /* border: 1px solid black; */
-    width: 800px;
-    height: 800px;
+    width: 80vw;
+    height: 100vh;
     position: absolute;
-    top: 950px;
+    top: 900px;
     left: 65%;
     /* Position it to the right of the form */
     transform: translate(-50%, -50%);
@@ -1699,10 +1835,10 @@ footer .whatsapp-icon img:hover {
         display: none;
     }
 
-    .contact_us_2 .container-block.form-wrapper {
+    /* .contact_us_2 .container-block.form-wrapper {
         margin: 60px 10px 0 10px;
         padding: 30px 15px;
-    }
+    } */
 
     .contact_us_2 .text-blk.contactus-head {
         font-size: 24px;
@@ -1716,7 +1852,7 @@ footer .whatsapp-icon img:hover {
     .contact_us_2 .input,
     .contact_us_2 .textinput,
     .contact_us_2 .submit-btn {
-        width: 100%;
+        width: 88%;
     }
 }
 
@@ -1939,8 +2075,21 @@ footer .whatsapp-icon img:hover {
 .project-overview {
     display: flex;
     align-items: center;
+    justify-content: space-between; /* optional: spreads content */
+  
     margin-bottom: 40px;
+    /* flex-wrap: wrap; */
 }
+
+/* For small screens */
+@media (max-width: 768px) {
+    .project-overview {
+        flex-direction: column;
+        align-items: center; /* or center, depending on your design */
+        text-align: center; /* optional if you want centered text */
+    }
+}
+
 
 .project-image {
     width: 50%;
