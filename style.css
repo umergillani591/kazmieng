@@ -638,6 +638,15 @@ footer {
     /* Adds space after footer */
 }
 
+.footer-logo {
+    margin-top: 50px;
+}
+
+.img-link {
+    display: flex;
+    flex-direction: row;
+}
+
 .footer-section {
     flex: 1;
     /* Equal width for each section */
