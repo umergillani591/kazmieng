@@ -497,6 +497,7 @@ nav ul li a:hover {
     display: inline-block;
     animation: 15s special-slide infinite linear;
     width: 100%;
+    padding-left: 160px;
 }
 
 .special-logos-slide img {
