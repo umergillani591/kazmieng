@@ -1477,7 +1477,7 @@ footer .whatsapp-icon img:hover {
 /* Grid layout */
 .services-serpage-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Default: large screens */
+    grid-template-columns: repeat(3, 1fr); /* Default: large screens */
     gap: 20px;
     justify-items: center;
     align-items: center;
@@ -1517,20 +1517,21 @@ footer .whatsapp-icon img:hover {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 100%;
-    max-width: 200px;
-    min-height: 350px;
+    max-width: 250px;
+    height: 450px;
+    line-height: 1.2;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: slideUp 1s ease-out;
-    margin: auto;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
   }
 
-  .collapsed {
-    max-height: 100px;
-    overflow: hidden;
-  }
+  /* .collapsed {
+  max-height: 100px;
+  overflow: hidden;
+} */
   
   .service-page-card:hover {
     transform: translateY(-10px);
@@ -1552,13 +1553,13 @@ footer .whatsapp-icon img:hover {
   .service-page-card h3 {
     font-size: 1.5rem;
     font-weight: bold;
-    margin-bottom: 14px;
+    /* margin-bottom: 14px; */
     background: linear-gradient(to right, #21633a, #133053);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   
-  .service-desc {
+  /* .service-desc {
     font-size: 0.95rem;
     color: #444;
     text-align: left;
@@ -1571,7 +1572,7 @@ footer .whatsapp-icon img:hover {
   
   .service-desc.expanded {
     max-height: 1000px;
-  }
+  } */
   
   .service-page-card ul {
     padding-left: 18px;
@@ -1580,10 +1581,10 @@ footer .whatsapp-icon img:hover {
   }
   
   .service-learn-more-btn {
-    margin-top: 12px;
-    padding: 8px 18px;
+    /* margin-top: 12px; */
+    /* padding: 8px 18px; */
     background-color: #21633a;
-    color: #000000;
+    color: #fff;
     border: none;
     border-radius: 6px;
     cursor: pointer;
