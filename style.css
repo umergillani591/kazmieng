@@ -1513,42 +1513,98 @@ footer .whatsapp-icon img:hover {
 .service-page-card {
     background-color: #f8f9fa;
     padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 200px;
-    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 200px;
+    min-height: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: slideUp 1s ease-out;
-}
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
-/* Hover effect */
-.service-page-card:hover {
+  .collapsed {
+    max-height: 100px;
+    overflow: hidden;
+  }
+  
+  .service-page-card:hover {
     transform: translateY(-10px);
-}
-
-.icon-page-container {
-    margin-bottom: 20px;
-}
-
-/* Icon styling */
-.service-page-icon {
-    font-size: 20px;
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
+  }
+  
+  .icon-page-container {
+    margin-bottom: 18px;
+  }
+  
+  .service-page-icon {
+    font-size: 28px;
     background: linear-gradient(to right, #21633a, #133053);
-    color: transparent;
-    background-clip: text;
-}
-
-.service-page-card h3 {
-    font-size: 1.8rem;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+  
+  .service-page-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 14px;
     background: linear-gradient(to right, #21633a, #133053);
-    color: transparent;
-    background-clip: text;
-}
-
-.service-page-card p {
-    font-size: 1rem;
-    color: #666;
-}
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .service-desc {
+    font-size: 0.95rem;
+    color: #444;
+    text-align: left;
+    margin: 10px 0;
+    line-height: 1.5;
+    max-height: 150px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+  
+  .service-desc.expanded {
+    max-height: 1000px;
+  }
+  
+  .service-page-card ul {
+    padding-left: 18px;
+    list-style-type: disc;
+    margin: 0;
+  }
+  
+  .service-learn-more-btn {
+    margin-top: 12px;
+    padding: 8px 18px;
+    background-color: #21633a;
+    color: #000000;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .service-learn-more-btn:hover {
+    background-color: #133053;
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
 
 /* Why Choose Us Section */
 .why-choose-us {
