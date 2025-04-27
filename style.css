@@ -2293,3 +2293,93 @@ footer .whatsapp-icon img:hover {
       gap: 15px;
     }
   }
+
+/*/////////////////////////////// HSE css //////////////////////////////////////////////////////*/
+
+/* Hero Section */
+.kes-hero {
+    background: linear-gradient(135deg, #004e92, #000428);
+    text-align: center;
+    padding: 100px 20px;
+    color: white;
+  }
+  
+  .kes-hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+  }
+  
+  .kes-tagline {
+    font-size: 1.2em;
+    opacity: 0.85;
+  }
+  
+  /* Sections */
+  .kes-section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .kes-gradient-title {
+    font-size: 2.2em;
+    font-weight: 900px;
+    background: linear-gradient(90deg, #133f23, #0f1e67);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+  }
+  
+  .kes-paragraph {
+    margin-bottom: 20px;
+    line-height: 2;
+  }
+  
+  .kes-list {
+    list-style: inside disc;
+    line-height: 2;
+    padding-left: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Images */
+  .kes-image {
+    width: 100%;
+    border-radius: 12px;
+    margin: 30px 0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease;
+  }
+  
+  .kes-image:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Footer */
+  .kes-footer {
+    text-align: center;
+    background: #000428;
+    color: #fff;
+    padding: 20px;
+    font-size: 0.9em;
+  }
+  
+  /* Animations */
+  @keyframes kesFadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  @keyframes kesSlideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Animation Classes */
+  .kes-fade-in {
+    animation: kesFadeIn 2s ease-out;
+  }
+  
+  .kes-slide-up {
+    animation: kesSlideUp 1.5s ease-in-out;
+  }
